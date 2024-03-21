@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_200sdp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@drawable/white_bg"
+    android:padding="@dimen/_6sdp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/pht"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/okimg" />
+
+    <TextView
+        android:id="@+id/gf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@id/pht"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/droid_serif_bold"
+        android:gravity="center"
+        android:text="@string/suc_reg"
+        android:textColor="@color/dark_green"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gf"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/droid_serif"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:gravity="center"
+        android:textColor="@color/grey"
+        android:text="@string/reg_nt"
+        android:textSize="@dimen/_12ssp" />
+
+    <Button
+        android:id="@+id/kd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fw"
+        android:layout_centerInParent="true"
+        android:outlineProvider="background"
+        android:shadowColor="@color/black"
+        android:text="@string/okay"
+        android:fontFamily="@font/droid_serif_bold"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:textColor="@color/purple"
+        android:textSize="@dimen/ro_bt" />
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_background"
+    android:padding="@dimen/_8sdp"
+    >
+
+    <TextView
+        android:id="@+id/fg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/gun_play"
+        android:gravity="center"
+        android:text="@string/entPh"
+        android:textColor="@color/white" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enterPh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/fg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:hint="@string/phone"
+        android:textColorHint="@color/grey"
+        app:boxBackgroundMode="filled"
+        app:boxCollapsedPaddingTop="@dimen/_2sdp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="11"
+        app:counterTextAppearance="@style/error_text2"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_text2"
+        app:hintTextAppearance="@style/error_text2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="@dimen/_193sdp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:digits="@string/phone_validate"
+            android:gravity="bottom|center_horizontal"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingStart="@dimen/_3sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_3sdp"
+            android:fontFamily="@font/droid_serif"
+            android:paddingBottom="@dimen/_3sdp"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/proceedOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/enterPh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:paddingHorizontal="@dimen/_6sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:text="@string/proceed"
+        android:textAllCaps="false"
+        android:fontFamily="@font/droid_serif"
+        android:textSize="@dimen/cn"
+        android:textStyle="bold" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

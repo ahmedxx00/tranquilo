@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/mastard"
+    tools:context=".activities.Splash">
+
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/splash_logo" />
+
+    <TextView
+        android:id="@+id/brt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/splash_logo"
+        android:gravity="center"
+        android:text="@string/brought"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/arabetics" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brt"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/koodak"
+        android:gravity="center"
+        android:text="@string/temsah"
+        android:textColor="@color/english_blue"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold" />
+</RelativeLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:gravity="center"-->
+    <!--    android:background="@color/bg"-->
+    <!--    tools:context=".activities.Splash">-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/splash_logo"-->
+    <!--        android:layout_width="@dimen/_130sdp"-->
+    <!--        android:layout_height="@dimen/_130sdp"-->
+    <!--        android:gravity="center"-->
+    <!--        android:contentDescription="@string/app_name"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_marginStart="@dimen/_8sdp"-->
+    <!--        android:layout_marginEnd="@dimen/_8sdp"-->
+    <!--        android:layout_marginBottom="@dimen/_10sdp"-->
+    <!--        android:src="@drawable/splash_logo"-->
+    <!--        android:scaleType="centerInside"-->
+    <!--        />-->
+
+    <!--</RelativeLayout>-->

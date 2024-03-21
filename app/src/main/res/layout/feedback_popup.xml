@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_260sdp"
+    android:layout_height="@dimen/_450sdp"
+    android:background="@drawable/mastard_black_border"
+    android:focusableInTouchMode="true"
+    android:layoutDirection="ltr"
+    android:padding="@dimen/_8sdp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fb_ph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:hint="@string/phone"
+        android:textColorHint="@color/purple_white"
+        app:boxBackgroundMode="filled"
+        app:boxCollapsedPaddingTop="@dimen/_2sdp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="11"
+        app:counterTextAppearance="@style/errTxt"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/errTxt"
+        app:hintTextAppearance="@style/errTxt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/feedback_phone"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_purp"
+            android:digits="@string/phone_validate"
+            android:fontFamily="@font/droid_serif"
+            android:gravity="bottom|center_horizontal"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingStart="@dimen/_3sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_3sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:shadowColor="@color/white"
+            android:shadowRadius="0.5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/fb_nt_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fb_ph"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:fontFamily="@font/droid_serif"
+        android:gravity="start"
+        android:text="@string/fb_nt_1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fb_nt_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fb_nt_1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/droid_serif"
+        android:gravity="start"
+        android:text="@string/fb_nt_2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9ssp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/send_feedback"
+        android:layout_below="@id/fb_nt_2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:hint=""
+        android:textColorHint="@color/purple_white"
+        app:boxBackgroundMode="filled"
+        app:boxCollapsedPaddingTop="@dimen/_2sdp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="1000"
+        app:counterTextAppearance="@style/errTxt"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/errTxt"
+        app:hintTextAppearance="@style/errTxt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/feedback_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_290sdp"
+            android:background="@drawable/main_purp"
+            android:fontFamily="@font/gun_play"
+            android:gravity="start|top"
+            android:inputType="text|textMultiLine"
+            android:maxLength="1000"
+            android:padding="@dimen/_6sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/send_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/btn_green"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:text="@string/send"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12ssp" />
+</RelativeLayout>

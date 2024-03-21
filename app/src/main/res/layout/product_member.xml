@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/_3sdp"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/btn_mastard"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    >
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:dropDownWidth="@dimen/_65sdp"
+        android:dropDownSelector="@color/black"
+        android:gravity="start|center_vertical"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@color/bg"
+        android:backgroundTint="@color/black"
+        android:theme="@style/Spinner"
+        />
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toStartOf="@id/spinner"
+        android:gravity="center"
+        android:fontFamily="@font/droid_serif"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:text="@string/chooseNum"
+        android:textColor="@color/mainBlack"
+        android:textSize="@dimen/_12ssp" />
+
+    <TextView
+        android:id="@+id/memberTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_toStartOf="@id/num"
+        android:gravity="center"
+        android:fontFamily="@font/droid_serif_bold"
+        android:paddingHorizontal="@dimen/_3sdp"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        />
+
+</RelativeLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_gravity="center_horizontal"-->
+<!--    android:background="@drawable/round_border"-->
+<!--    android:descendantFocusability="blocksDescendants"-->
+<!--    >-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner"-->
+<!--        android:layout_width="@dimen/_54sdp"-->
+<!--        android:layout_height="@dimen/_34sdp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:dropDownWidth="@dimen/_54sdp"-->
+<!--        android:dropDownSelector="@color/black"-->
+<!--        android:gravity="start|center_vertical"-->
+<!--        android:spinnerMode="dropdown"-->
+<!--        android:popupBackground="@color/bg"-->
+<!--        android:backgroundTint="@color/black"-->
+<!--        android:theme="@style/Spinner"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/num"-->
+<!--        android:layout_width="@dimen/_62sdp"-->
+<!--        android:layout_height="@dimen/_34sdp"-->
+<!--        android:layout_toEndOf="@id/spinner"-->
+<!--        android:gravity="center"-->
+<!--        android:text="@string/chooseNum"-->
+<!--        android:textColor="@color/mainBlack"-->
+<!--        android:textSize="@dimen/_12ssp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/memberTitle"-->
+<!--        android:layout_width="@dimen/_93sdp"-->
+<!--        android:layout_height="@dimen/_34sdp"-->
+<!--        android:layout_toEndOf="@id/num"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/orange"-->
+<!--        android:textSize="@dimen/_12ssp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--</RelativeLayout>-->

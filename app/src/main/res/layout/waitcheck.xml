@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="@dimen/_5sdp"
+    android:background="@drawable/round_corners"
+    android:gravity="center_horizontal">
+
+    <com.agrawalsuneet.dotsloader.loaders.SlidingLoader
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:slidingloader_animDur="1500"
+        app:slidingloader_distanceToMove="8"
+        app:slidingloader_dotsDist="@dimen/_4sdp"
+        app:slidingloader_dotsRadius="@dimen/_6sdp"
+        app:slidingloader_firstDotColor="@color/white"
+        app:slidingloader_secondDotColor="@color/grey"
+        app:slidingloader_thirdDotColor="@color/orange"
+        android:layoutDirection="ltr"
+        />
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_marginBottom="@dimen/_3sdp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+
+    <TextView
+        android:id="@+id/pDty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:textColor="@color/darkNile"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/droid_serif"
+        android:minWidth="@dimen/_70sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="@string/num"
+        android:fontFamily="@font/droid_serif"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pNmy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:textColor="@color/darkBlue"
+        android:fontFamily="@font/droid_serif"
+        android:textSize="@dimen/_12ssp"
+        android:minWidth="@dimen/_40sdp"
+        android:textStyle="bold" />
+
+</LinearLayout>

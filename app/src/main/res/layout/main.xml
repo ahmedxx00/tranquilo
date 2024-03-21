@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/mastard"
+    tools:context=".activities.Main">
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/logout"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="@dimen/_30sdp"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_marginEnd="@dimen/_20sdp"-->
+    <!--        android:clickable="true"-->
+    <!--        android:drawablePadding="@dimen/_3sdp"-->
+    <!--        android:focusable="true"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="@string/logout"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textSize="@dimen/_14ssp"-->
+    <!--        android:fontFamily="@font/niz"-->
+    <!--        android:textStyle="italic"-->
+    <!--        android:visibility="visible"-->
+    <!--        android:layout_marginBottom="@dimen/_minus5sdp"-->
+    <!--        app:drawableEndCompat="@drawable/ic_logout" />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/logout"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:contentDescription="@string/app_name"-->
+    <!--        android:src="@drawable/ic_logout"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_marginEnd="@dimen/_20sdp"-->
+    <!--        android:background="@color/black"-->
+    <!--        />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/logoutFab"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_200sdp"
+        android:backgroundTint="@color/black"
+        android:contentDescription="@string/app_name"
+        android:elevation="@dimen/_10sdp"
+        android:layoutDirection="ltr"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_logout_2"
+        app:backgroundTint="@color/black"
+        app:fabCustomSize="@dimen/_25sdp"
+        app:maxImageSize="@dimen/_17sdp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/feedbackFab"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_150sdp"
+        android:backgroundTint="@color/black"
+        android:contentDescription="@string/app_name"
+        android:elevation="@dimen/_10sdp"
+        android:layoutDirection="ltr"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_feedback"
+        app:backgroundTint="@color/black"
+        app:fabCustomSize="@dimen/_25sdp"
+        app:maxImageSize="@dimen/_15sdp" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/_33sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:elevation="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_100sdp">
+
+        <ImageView
+            android:id="@+id/g_image"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/g_pic"
+            android:visibility="gone"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/giftFab"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/black"
+            android:contentDescription="@string/app_name"
+            android:elevation="@dimen/_10sdp"
+            android:layoutDirection="ltr"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_gift"
+            app:backgroundTint="@color/black"
+            app:fabCustomSize="@dimen/_25sdp"
+            app:maxImageSize="@dimen/_17sdp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/noInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/droid_serif"
+        android:gravity="center"
+        android:padding="@dimen/_20sdp"
+        android:textColor="@color/red"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/refresh"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/noInternet"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_refresh"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:layout_gravity="center"-->
+    <!--    android:background="@color/bg"-->
+    <!--    tools:context=".activities.Main">-->
+
+    <!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:id="@+id/logout"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_height="@dimen/_30sdp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_alignParentTop="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_alignParentEnd="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_centerInParent="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_marginEnd="@dimen/_20sdp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:clickable="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:drawablePadding="@dimen/_3sdp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:focusable="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:text="@string/logout"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:textColor="@color/black"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:textSize="@dimen/_14ssp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:fontFamily="@font/niz"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:textStyle="italic"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:visibility="visible"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_marginBottom="@dimen/_minus5sdp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        app:drawableEndCompat="@drawable/ic_logout" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;    <ImageButton&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:id="@+id/logout"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:contentDescription="@string/app_name"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:src="@drawable/ic_logout"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_alignParentTop="true"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_alignParentEnd="true"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:layout_marginEnd="@dimen/_20sdp"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        android:background="@color/black"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        />&ndash;&gt;-->
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/logoutFab"-->
+    <!--        android:layout_width="@dimen/_25sdp"-->
+    <!--        android:layout_height="@dimen/_25sdp"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_marginEnd="@dimen/_15sdp"-->
+    <!--        android:layout_marginBottom="@dimen/_200sdp"-->
+    <!--        android:backgroundTint="#e6e6fa"-->
+    <!--        android:contentDescription="@string/app_name"-->
+    <!--        android:scaleType="centerInside"-->
+    <!--        android:src="@drawable/ic_logout"-->
+    <!--        app:backgroundTint="@color/purple"-->
+    <!--        app:fabCustomSize="@dimen/_25sdp"-->
+    <!--        app:maxImageSize="@dimen/_17sdp" />-->
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/mainContainer"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/noInternet"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:padding="@dimen/_20sdp"-->
+    <!--        android:textColor="@color/red"-->
+    <!--        android:textSize="@dimen/_14ssp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:visibility="gone" />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/refresh"-->
+    <!--        android:layout_width="@dimen/_40sdp"-->
+    <!--        android:layout_height="@dimen/_40sdp"-->
+    <!--        android:layout_below="@id/noInternet"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_marginTop="@dimen/_10sdp"-->
+    <!--        android:background="@android:color/transparent"-->
+    <!--        android:contentDescription="@string/app_name"-->
+    <!--        android:scaleType="fitCenter"-->
+    <!--        android:src="@drawable/ic_refresh"-->
+    <!--        android:visibility="gone" />-->
+
+    <!--</RelativeLayout>-->

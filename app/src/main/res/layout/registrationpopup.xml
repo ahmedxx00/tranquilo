@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_220sdp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_orange"
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/nuImg"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/new_user" />
+    <TextView
+        android:id="@+id/nay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/nuImg"
+        android:gravity="center"
+        android:text="@string/new_acc"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/droid_serif"
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/regPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nay"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:hint="@string/entPh"
+        android:textColorHint="@color/light_grey"
+        app:boxBackgroundMode="filled"
+        app:boxCollapsedPaddingTop="@dimen/_2sdp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="11"
+        app:counterTextAppearance="@style/error_text2"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_text2"
+        app:hintTextAppearance="@style/error_text2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="@dimen/_193sdp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:digits="@string/phone_validate"
+            android:gravity="bottom|center_horizontal"
+            android:inputType="number"
+            android:maxLength="11"
+            android:fontFamily="@font/droid_serif"
+            android:paddingHorizontal="@dimen/_3sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:textColor="@color/darkNile"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/regPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regPhone"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:hint="@string/entPas"
+        android:textColorHint="@color/light_grey"
+        app:boxBackgroundMode="filled"
+        app:boxCollapsedPaddingTop="@dimen/_2sdp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="15"
+        app:counterTextAppearance="@style/error_text2"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_text2"
+        app:hintTextAppearance="@style/error_text2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="@dimen/_193sdp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:digits="@string/password_validate"
+            android:gravity="bottom|center_horizontal"
+            android:inputType="text|textVisiblePassword"
+            android:maxLength="15"
+            android:fontFamily="@font/droid_serif"
+            android:paddingHorizontal="@dimen/_3sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:textColor="@color/darkNile"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/regBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regPass"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:background="@drawable/btn_background"
+        android:text="@string/crt_acc"
+        android:textAllCaps="false"
+        android:fontFamily="@font/droid_serif"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

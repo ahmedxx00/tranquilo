@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--####################################  text sizes  #### ssp ############################################ -->
+
+    <!-- working_hours_fragment -->
+    <dimen name="wh_nt">@dimen/_20ssp</dimen>
+    <dimen name="wh_day">@dimen/_20ssp</dimen>
+    <dimen name="wh_f">@dimen/_15ssp</dimen>
+    <dimen name="wh_st">@dimen/_15ssp</dimen>
+    <dimen name="wh_g">@dimen/_15ssp</dimen>
+    <dimen name="wh_en">@dimen/_15ssp</dimen>
+    <dimen name="wh_dtNote">@dimen/_15ssp</dimen>
+
+    <!-- login_activity -->
+    <dimen name="la_lb">@dimen/_15ssp</dimen>
+
+    <!-- products_fragment -->
+    <dimen name="pf_nw">@dimen/_11ssp</dimen>
+    <dimen name="pf_nh">@dimen/_11ssp</dimen>
+    <dimen name="pf_prc">@dimen/_18ssp</dimen>
+    <dimen name="pf_mk">@dimen/_17ssp</dimen>
+
+    <!-- reg_ok -->
+    <dimen name="ro_bt">@dimen/_15ssp</dimen>
+
+    <dimen name="cn">@dimen/_14ssp</dimen>
+
+    <dimen name="ovt">@dimen/_14ssp</dimen>
+    <!--####################################  margins  ### sdp ############################################# -->
+
+    <dimen name="now_t">@dimen/_15sdp</dimen>
+
+</resources>

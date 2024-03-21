@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProductsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:id="@+id/topLin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@color/grey"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:gravity="center"
+                android:fontFamily="@font/droid_serif"
+                android:text="@string/nowWork"
+                android:textColor="@color/purple_white"
+                android:textSize="@dimen/pf_nw" />
+
+            <TextClock
+                android:id="@+id/nowTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/now_t"
+                android:fontFamily="@font/droid_serif"
+                android:format12Hour="h:mm:ss a"
+                android:format24Hour="HH:mm:ss"
+                android:gravity="center"
+                android:textColor="@color/dark_green"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/willEnd"
+                android:fontFamily="@font/droid_serif"
+                android:textColor="@color/purple_white"
+                android:textSize="@dimen/pf_nh" />
+
+            <TextView
+                android:id="@+id/nearest_endTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/droid_serif"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/groupsRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/prc"
+            android:layout_below="@id/topLin"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/round_border"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="@dimen/_4sdp"
+            android:padding="@dimen/_4sdp" />
+
+        <LinearLayout
+            android:id="@+id/prc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/createOrder"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/btn_background"
+            android:gravity="center"
+            android:padding="@dimen/_4sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/prcTxt"
+                android:fontFamily="@font/droid_serif"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/pf_prc"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/prcNum"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLength="10"
+                android:fontFamily="@font/droid_serif"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_19ssp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/crn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/cur"
+                android:fontFamily="@font/droid_serif"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/createOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/roundy"
+            android:elevation="@dimen/_4sdp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:shadowColor="@color/purple"
+            android:stateListAnimator="@null"
+            android:text="@string/createOrder"
+            android:textAllCaps="false"
+            android:fontFamily="@font/droid_serif"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pf_mk"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</FrameLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".fragments.ProductsFragment">-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        tools:ignore="UselessParent">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/topLin"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentTop="true"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:layout_marginTop="@dimen/_4sdp"-->
+    <!--            android:background="@color/grey"-->
+    <!--            android:paddingHorizontal="@dimen/_2sdp"-->
+    <!--            android:gravity="center">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/nearest_endTime"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:fontFamily="@font/droidserif"-->
+    <!--                android:gravity="center"-->
+    <!--                android:textColor="@color/red"-->
+    <!--                android:textSize="@dimen/_11ssp" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="@dimen/_2sdp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="@string/willEnd"-->
+    <!--                android:textColor="@color/purple_white"-->
+    <!--                android:textSize="@dimen/_11ssp" />-->
+
+    <!--            <TextClock-->
+    <!--                android:id="@+id/nowTime"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="@dimen/_8sdp"-->
+    <!--                android:fontFamily="@font/droidserif"-->
+    <!--                android:format12Hour="h:mm:ss a"-->
+    <!--                android:format24Hour="HH:mm:ss"-->
+    <!--                android:gravity="center"-->
+    <!--                android:textColor="@color/dark_green"-->
+    <!--                android:textSize="@dimen/_11ssp"-->
+    <!--                />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="@dimen/_2sdp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="@string/nowWork"-->
+    <!--                android:textColor="@color/purple_white"-->
+    <!--                android:textSize="@dimen/_11ssp" />-->
+    <!--        </LinearLayout>-->
+
+    <!--        <androidx.recyclerview.widget.RecyclerView-->
+    <!--            android:id="@+id/groupsRV"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_above="@id/prc"-->
+    <!--            android:layout_below="@id/topLin"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:layout_marginHorizontal="@dimen/_8sdp"-->
+    <!--            android:layout_marginBottom="@dimen/_8sdp"-->
+    <!--            android:layout_marginTop="@dimen/_4sdp"-->
+    <!--            android:background="@drawable/round_border"-->
+    <!--            android:divider="@android:color/transparent"-->
+    <!--            android:dividerHeight="@dimen/_4sdp"-->
+    <!--            android:padding="@dimen/_4sdp" />-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/prc"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_above="@id/createOrder"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:layout_marginBottom="@dimen/_15sdp"-->
+    <!--            android:background="@drawable/btn_background"-->
+    <!--            android:gravity="center"-->
+    <!--            android:padding="@dimen/_4sdp">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/prcNum"-->
+    <!--                android:layout_width="@dimen/_130sdp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:gravity="center"-->
+    <!--                android:maxLength="10"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:textSize="@dimen/_19ssp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="@string/prcTxt"-->
+    <!--                android:textColor="@color/orange"-->
+    <!--                android:textSize="@dimen/_23ssp"-->
+    <!--                android:textStyle="bold" />-->
+    <!--        </LinearLayout>-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/createOrder"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentBottom="true"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:layout_marginBottom="@dimen/_12sdp"-->
+    <!--            android:background="@drawable/roundy"-->
+    <!--            android:elevation="@dimen/_4sdp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:shadowColor="@color/purple"-->
+    <!--            android:stateListAnimator="@null"-->
+    <!--            android:text="@string/createOrder"-->
+    <!--            android:paddingHorizontal="@dimen/_20sdp"-->
+    <!--            android:paddingVertical="@dimen/_5sdp"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="@dimen/_17ssp"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--    </RelativeLayout>-->
+
+    <!--</FrameLayout>-->

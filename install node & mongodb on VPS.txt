@@ -1,0 +1,283 @@
+1 : go purchase a vps or what ever 
+2 : connect using ssh root@serverIP
+3 : enter password
+4 : change password =>  server-name~# passwd
+5 : enter new password and retype it .
+6 : sign out => server-name~# exit
+7 :  then reconnect with new password 
+===================================
+if problem occured while connecting to vps and this messge appears
+"WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!"
+type this code in c:\> ssh-keygen -R "host name" 
+to remove host name from known hosts in your windows 
+======================================
+
+once we connect to our vps ssh 
+###############[1] node js and npm ###############
+
+the node LTS is now 18.x { the most stable as of 2024 for ubuntu vps - dont use the newest }
+go to  ( https://github.com/nodesource/distributions) get what node version you want use the 18.x
+--------------------------------------------------------------------------------------------------------------------------------
+1 ## add nodejs 10 ppa (personal package archive) from nodesource
+* curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - // remove sudo if you are root 
+--------------------------------------------------------------------------------------------------------------------------------
+2 ## install nodejs and npm
+* sudo apt-get install -y nodejs // remove sudo if you are root 
+ --------------------------------------------------------------------------------------------------------------------------------
+now node and npm both are installed we can check using 
+* node --version
+* npm --version
+
+###############[2] pushing our project to github ###############
+add node_modules to  .gitignore and push 
+## visit : https://www.youtube.com/watch?v=BK2pzY9sT0k&ab_channel=BoutEducation
+
+1- create new private repository then copy his https link like ("https://github.com/ahmedxx00/TRANQUILO_APP.git")
+2- in vs code open terminal with type gitbash not powershell 
+3- git init -b master // initialize master
+4- git add . // the last thing here is dot 
+5- git commit -m "first commit" // add first commit
+6- git remote add origin https://github.com/ahmedxx00/TRANQUILO_APP.git // this is the https link 
+7- git push -u origin master
+
+###############[3] cloning our project and npm install to install packages ###############
+
+1 ## cd to home 
+* cd
+2 ## mkdir for our apps 
+* mkdir apps
+2 ## cd to apps dir
+* cd apps
+3 ## now git clone our project in a folder that holds our git project name by default
+* git clone "our repo master https link" // give credentials to github to proceed use acces token instead of password
+4 ## when in apps dir type "ls" to see project is there 
+now * cd "project dir name"
+inside project dir 
+* npm install // to install all packages from package.json
+
+#############[4] ufw ##############
+
+outside project dir 
+use these in sequence [ الترتيب هنا أهم حاجة / احسن تقفل الفيروول على نفسك متعرفش تتصل اس اس اتش تانى  ]
+* sudo ufw status // remove sudo if you are root
+* sudo ufw allow ssh // (Port 22) // remove sudo if you are root
+* sudo ufw allow http // (Port 80) // remove sudo if you are root
+* sudo ufw allow https // (Port 443) // remove sudo if you are root
+* sudo ufw enable // remove sudo if you are root
+
+use =>
+
+* sudo apt install net-tools // just to install netstat
+* sudo netstat -plntu
+* sudo ufw status
+to see ports
+
+#############[5] nginx ##############
+outside project dir
+
+1 ## install nginx 
+
+* sudo apt install nginx // remove sudo if you are root
+
+* sudo nano /etc/nginx/sites-available/default // remove sudo if you are root
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+2 ## Add the following to the location part of the server block
+
+server_name yourdomain.com www.yourdomain.com;
+
+    location / {
+	#whatever port your app runs on
+        proxy_pass http://localhost:3000; 
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+--------------------------------------------------------------------------------------------------------------------------------
+3 ## Check NGINX config
+* sudo nginx -t // remove sudo if you are root
+--------------------------------------------------------------------------------------------------------------------------------
+4 ## Restart NGINX
+* sudo service nginx restart // remove sudo if you are root
+
+#############[6] mongodb ##############
+
+outside project dir 
+
+## run these steps in sequence to install mongodb v4.4 correctly
+
+* sudo apt-get purge mongodb-org*
+* sudo apt remove mongodb
+* sudo apt purge mongodb
+* sudo apt autoremove
+* sudo rm -r /var/log/mongodb
+* sudo rm -r /var/lib/mongodb
+* sudo apt-get install gnupg
+* wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+* echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+* sudo apt update
+* sudo apt upgrade
+* sudo apt-get install -y mongodb-org
+* sudo apt-get install libc6
+* systemctl start mongod  OR  * sudo service mongod start
+* systemctl status mongod  OR  * sudo service mongod status
+
+## after seeing mongod status is Active , stop it to edit its config for ipv6 
+
+* systemctl stop mongod
+
+## then open config file to add net clause
+
+outside project dir
+* cd /etc
+* nano mongod.conf
+
+then add this to net clause
+
+net:
+  port:27017 // keep the port as it is if not 27017
+  ipv6: true
+  bindIpAll: true
+
+OR
+
+net:
+  port:27017 // keep the port as it is if not 27017
+  ipv6: true
+  bindIp: localhost
+
+
+## then close the file CTRL X -> y -> Enter
+
+## then set mongodb to start automatically on system startup
+
+* sudo systemctl enable mongod // remove sudo if you are root 
+
+* systemctl start mongod
+
+use =>
+* sudo netstat -plntu
+to see port 27017 now used by mongod service
+
+
+//---------------------------------------------- some mongodb commands ------------------------------------
+to switch to mongodb use  ~# mongo
+
+show dbs     
+
+use db_name        
+              
+db // to show db used now 
+
+show collections            
+ 
+db.collection_name.find()      
+          
+db.collection_name.find( { a : 1 } ) // find where a :1    
+
+exit                            #quit the mongo shell
+
+
+
+#############[7] pm2 #######################
+
+inside project dir 
+1 ## install pm2 with npm
+* sudo npm install -g pm2 // remove sudo if you are root
+-------------------------------------------------------------------------------------------------------------------------------
+inside project dir -
+2 ## set pm2 to start automatically on system startup
+* sudo pm2 startup systemd // remove sudo if you are root
+OR in case of using  ubuntu system 
+* sudo pm2 startup ubuntu // remove sudo if you are root
+--------------------------------------------------------------------------------------------------------------------------------
+inside project dir 
+then you can now use 
+* sudo pm2 start index.js (or whatever your file name) // remove sudo if you are root
+
+## Other pm2 commands
+
+* sudo pm2 status // remove sudo if you are root
+* sudo pm2 restart index.js  // remove sudo if you are root
+* sudo pm2 stop index.js  // remove sudo if you are root
+* sudo pm2 logs (Show log stream) // remove sudo if you are root
+* sudo pm2 flush (Clear logs) // remove sudo if you are root
+
+//---------------------------------------------------------------------------------------------------------
+inside project dir
+## to make sure the server is working correctly stop pm2 then run the 
+* node index.js
+just to make sure the server is running with or without pm2 then CTRL C and start pm2 again . 
+## use 
+* sudo pm2 logs // to see if any background errors occurs while service is running , if not then VOILA .
+//---------------------------------------------------------------------------------------------------------
+
+#############[8] add domain name (if there is one) and configure ##############
+
+* visit : https://gist.github.com/bradtraversy/cd90d1ed3c462fe3bddd11bf8953a896#9-add-domain-in-digital-ocean
+## and for whole process =>
+* visit : https://www.youtube.com/watch?v=oykl1Ih9pMg&ab_channel=TraversyMedia
+ 
+###############################################################################
+
+
+//++++++++++++++++++++++++++++++ some adding removing files codes for ubuntu +++++++++++++++++++++++++++++++++++++++++
+
+==================safe  copy file from local to server ========== on windows cmd  ==========
+scp E:\Github_Projects\dkhakhny\media\winston_toot.png root@84.32.188.211:/root/apps/TRANQUILO_APP/dakhakhny_products_images/winston_toot.png
+
+===================safe  copy file from server to local ========= on windows cmd =========
+scp root@84.32.188.74:/root/apps/ESTBA7A_APP/index.js c:\Users\ahmed\Desktop\server_files\index.js
+===========================================================================================
+==================safe  copy folder from local to server ========== on windows cmd  ===[dont need to create empty folder there first]=======
+scp -r c:\Users\ahmed\Desktop\NARCOS_GROUP_APP\car_makes_icons root@84.32.188.96:/root/apps/NARCOS_GROUP_APP/car_makes_icons
+===================safe  copy folder from server to local ========= on windows cmd =========
+scp -r root@84.32.188.96:/root/apps/NARCOS_GROUP_APP/car_makes_icons c:\Users\ahmed\Desktop\NARCOS_GROUP_APP\car_makes_icons
+============================================================================================
+======================================================================================
+mkdir folder_name ==>   to create folder
+rm -d folder_name ===>  Remove an empty directory using the rm command.
+rm -r folder_name ===>  Remove a non-empty directory and its content.
+
+reboot  ==> if there is any error try to reboot the system 
+===========================================[remove file || files]=================================================
+rm filename
+rm filename1 filename2 filename3 filename4 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+------------------------ link android project to Github first time  --------------------------------
+
+from VCS tab avobe
+[1]- click "Enable version control integration" 
+
+switch to project mode not android 
+
+[2]- right click project dir --> Git --> choose Add .
+
+[3]- again right click project dir --> Git --> commit Directory .
+
+[4]- type first commit  then commit -->
+ if popup shows click (commitAsIs ) -->
+ warnings will show --> click commit anyway .
+
+[5] - go create empty repo in github with the same app name for example "Bafra" , copy its link .
+
+[6] - again right click project dir --> Git --> choose push --> click "Define remote" .
+ 
+ Name -> origin .
+ Url -> type the new repo link then push the commit.
+
+----------------------- Linking Done ----------------------
+
+-- for any future code edit you know push commit --> push . green arrows above
+
+------------------------ [ removing and unlinking Git from project ]  ---------------------
+
+1 - remove the (.git ) hidden file in project folder 
+2 - File --> Settings --> Version Control --> Directory Mappings --> select project path --> click the minus (-) to unlink the directory .
+
+----------------------- Unlinking Done ----------------------

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mastard"
+    tools:context=".fragments.WorkingHoursFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:fontFamily="@font/droid_serif"
+                android:text="@string/nt"
+                android:textColor="@color/black"
+                android:textSize="@dimen/wh_nt"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                />
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nt"
+                android:layout_centerInParent="true"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:background="@color/transBlack"
+                android:fontFamily="@font/droid_serif"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/wh_day"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/day"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                >
+
+                <TextView
+                    android:id="@+id/f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/droid_serif"
+                    android:gravity="center"
+                    android:text="@string/from"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/wh_f"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/st"
+                    android:layout_width="@dimen/_160sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@color/transBlack"
+                    android:fontFamily="@font/droid_serif"
+                    android:gravity="center"
+                    android:padding="@dimen/_7sdp"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/wh_st"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/k"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                >
+
+                <TextView
+                    android:id="@+id/g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/droid_serif"
+                    android:gravity="center"
+                    android:text="@string/to"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/wh_g"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/en"
+                    android:layout_width="@dimen/_160sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@color/transBlack"
+                    android:gravity="center"
+                    android:fontFamily="@font/droid_serif"
+                    android:padding="@dimen/_7sdp"
+                    android:textColor="@color/lightRed"
+                    android:textSize="@dimen/wh_en"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dtNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:textColor="@color/red"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/y"
+                android:fontFamily="@font/droid_serif"
+                android:textSize="@dimen/wh_dtNote"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>
